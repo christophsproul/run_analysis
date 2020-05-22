@@ -23,4 +23,4 @@ colnames(xtotal) <- variables[selectedv[,1],2]
 colnames(subtotal) <- "subject"
 total <- cbind(xtotal, activitylabel, subtotal)
 totalmean <- total %>% group_by(activitylabel, subject) %>% summarize_each(funs(mean))
-write.table(totalmean, file = ".\\run_analysis\\tidydata.txt", row.names = FALSE, col.names = TRUE)
+write.table(totalmean, file = ".\\tidydata.txt", row.names = FALSE, col.names = TRUE)
